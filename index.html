@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            padding: 40px;
+        }
+        body{
+            font-family: Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        article{
+            padding-top: 30px;
+            margin-left: 0;
+            margin-right: 0
+        }
+        footer{
+            margin-top: 360px;
+            padding: 10px;
+            height: 40px;
+        }
+        header, footer{
+            background-image: url(pattern1.png);
+        }
+        h1{
+            margin-top: 0px;
+            padding-bottom: 0px;
+        }
+        h2{
+            text-align: center;
+            padding-top: 25px;
+        }
+        a{
+            color: #4d4855;
+        }
+        dl{
+            text-align: center;
+        }
+        a:hover{
+            text-decoration-color: #655d72;
+            color: #655d72;
+        }
+        .gradient-1{
+            background-color: #4d4855;
+            background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+            background-size: 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        }
+        .name{
+            margin-left: 100px;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        .gradient-2{
+            background-color: #655d72;
+            background-image: linear-gradient(147deg, #655d72 0%, #898196 74%);
+            background-size: 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            margin-left: 10px;
+        }
+        .profession{
+            vertical-align: -50%;
+            font-size: 20px; color: grey;
+            letter-spacing: .1em;
+        }
+        .main-text{
+            display: inline-block;
+            width: 49vw;
+            vertical-align: middle;
+            text-align: right
+        }
+        .frisch-photo{
+            border: #4d4855 2px solid;
+            padding: 2px;
+            margin-left: 10px;
+            width:350px;
+            vertical-align: middle;
+        }
+        .frisch-photo-container{
+            width: 49vw;
+            display: inline-block;
+        }
+        button:hover{
+            border: #655d72 3px solid;
+        }
+        .button{
+            background: transparent;
+            border: 2px solid #4d4855;
+            position: relative;
+            font-size: 14px;
+            letter-spacing: .3em;
+            padding: 17px 34px 17px 39px;
+            cursor: pointer;
+        }
+        .companies_background{
+            background-image: url(pattern1.png);
+            height: 150px;
+        }
+        .content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .company{
+            height: 100px;
+        }
+        .nav{
+            cursor: pointer;
+            margin-right: 30px;
+            text-underline-offset: 0.3em;
+            vertical-align: -50%;
+        }
+        .company-text{
+            text-align: center;
+        }
+        .examples{
+            justify-content: center;
+            gap: 50px;
+        }
+        .example-photos{
+            height: 300px;
+        }
+        .company-logos{
+            vertical-align: middle;
+            height: 20px;
+        }
+        .company-names{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="gradient-1 name">Макс Фриш</span>
+        <span class="gradient-2 profession">Fullstack JavaScript</span>
+        <nav style="display:inline; float:right;">
+            <span class="nav"><a href="#about_me">Обо мне</a></span>
+            <span class="nav"><a href="#projects">Примеры работ</a></span>
+            <span class="nav" style="margin-right: 100px;"><a href="#contacts">Контакты</a></span>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <div class="main-text">
+                <div>
+                    <h1 id="about_me">Занимаюсь<br>Full-Stack<br>разработкой<br>больше 10 лет<br>Дорого.<br>Качественно.<br>В срок.</h1>
+                    <p>От вас задача<br>&mdash;<br>от меня отдача</p>
+                    <button class="button" onclick="document.getElementById('contacts').scrollIntoView();">Связать со мной</button>
+                </div>
+            </div>
+            <div class="frisch-photo-container">
+                <img class="frisch-photo" src="maxfrisch.jpg" alt="maxfrisch">
+            </div>
+        </article>
+        <section class="companies_background">
+            <h2 class="gradient-1">Со мной сотрудничают</h2>
+            <div class="content">
+                <div>
+                    <img class="company" src="kandinsky1.png" alt="">
+                    <p class="company-text">Петушиная ферма</p>
+                </div>
+                <div> 
+                    <img class="company" src="kandinsky3.png" alt="">
+                    <p class="company-text">Рога и копыта</p>
+                </div>
+                <div>
+                    <img class="company" src="kandinsky2.png" alt="">
+                    <p class="company-text">Переводчик и Ко</p>
+                </div>
+                <div>
+                    <img class="company" src="kandinsky4.png" alt="">
+                    <p class="company-text">Храм лотоса</p>
+                </div>
+            </div>
+        </section>
+        <section class="companies_background" style="margin-top: 100px;">
+            <h2 class="gradient-1" id="projects">Примеры работ</h2>
+            <div class="content examples">
+                <div>
+                    <img class="example-photos" src="kandinsky-site.png" alt="">
+                    <dl>
+                        <dt>30000 ₽</dt>
+                        <dt>3 месяца</dt>
+                        <dt>Node JS + JS</dt>
+                    </dl>
+                </div>
+                <div>
+                    <img class="example-photos" src="kandinsky-site.png" alt="">
+                    <dl>
+                        <dt>150000 ₽</dt>
+                        <dt>7 месяцев</dt>
+                        <dt>Vue + Laravel</dt>
+                    </dl>
+                </div>
+            </div>
+        </section> 
+    </main>
+    <footer id="contacts" class="content">
+        <div>
+            <img class="company-logos" src="telegram.svg" alt="">
+            <span class="company-names">
+                Telegram
+            </span>
+        </div>
+        <div>
+            <span class="company-names">Linked</span>
+            <img class="company-logos" src="linkedin.svg" alt="" style="margin-bottom: 4px;">
+        </div>
+        <div>
+            <img class="company-logos" src="github-mark.png" alt="">
+            <span class="company-names">GitHub</span>
+        </div>
+    </footer>
+</body>
+</html>
